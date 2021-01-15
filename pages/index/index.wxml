@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="container">
+
+    <view class="button0">
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 一起聊天 </button>
+    </view>
+
+     <image wx:if="{{hasUserInfo || !canIUse}}" bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+     <text wx:if="{{hasUserInfo || !canIUse}}" class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+
+  <!--
+  <view class="button1">
+    <button type="default" bindtap="gotoPage">一起聊天</button>
+  </view>
+  -->
+
+  <view class="button2">
+    <button type="default" bindtap="gotoGuess">猜拳游戏</button>
+  </view>
+
+
+  <view class="usermotto" wx:if="{{hasUserInfo || !canIUse}}">
+    <text class="user-motto">小科欢迎小主人回家</text>
+  </view>
+  <view class="usermotto">
+    <text></text>
+  </view>
+</view>
